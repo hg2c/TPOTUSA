@@ -1,0 +1,10 @@
+npm
+
+ssh proxy
+
+cd ${PROJECT_DIR}
+
+# clean
+# rm -rf node_modules
+docker-compose run --entrypoint /usr/local/bin/npm node install
+rsync -azvh --delete proxy:/home/luotao/yunshop-front/node_modules node_modules
